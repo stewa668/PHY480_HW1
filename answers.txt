@@ -15,3 +15,10 @@ will not change, which is why the error stops growing in relation to N. Essentia
 will evenually become like a hard limit, and both the sums will not change no matter how many more N 
 you do the function with.
 
+
+(4)
+
+I created a histogram of eps = (z_c - z)/z, and said that z is equal to the double precision version of 
+that calculation. Then I calculated the square roots of a bunch of small numbers multiple times double 
+and float, calculated eps in double, and fit the results into bins. The final histogram is in error_dist.ps 
+(or .pdf).

@@ -1,0 +1,47 @@
+// error_dist.cpp
+//
+// Time to make a histogram
+// This should tell us the approximate distribution, though 
+// we can't use matplotlib, which brings a tear to my eye.
+//
+
+// include files
+#include <iostream>		// note that .h is omitted
+#include <iomanip>		// note that .h is omitted
+#include <fstream>		// note that .h is omitted
+#include <cmath>
+using namespace std;
+
+// Globals
+const float xmin = -1e-6;
+const float xmax = 1e-6;
+const float xrange = 2e-6;	// Only solved analytically to reduce potential error
+const int bins = 2001;
+
+int
+main ()
+{
+
+  int y[bins] = 0;
+  for (int v = 0; v < 10000; v++)
+    {
+
+      for (int j = 0; j < 5; j++)
+	{
+	  float vp = sqrt (v * v);
+	  float x = vp - v;
+	  int i = (x - xmin) * bins / xrange ; 
+          if (i < bins)
+	  {
+	    y[i] += 1;
+	  }
+	}
+
+    }
+ ofstream out "error_dist.dat";
+for (int i = 0; i < bins; i++){
+x = i * (xrange/bins) + xmin; // Yes I know I am rewriting it.  
+out << setprecision(17) << setw(20) << x << y[i] << endl;
+} 
+
+}
