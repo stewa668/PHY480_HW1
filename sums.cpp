@@ -2,6 +2,8 @@
 //
 // Difference summing up and down with a 1/N series
 //
+// I put answer to question in answers.txt
+//
 //*********************************************************************// 
 
 // include files
