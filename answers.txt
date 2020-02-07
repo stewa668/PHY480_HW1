@@ -1,0 +1,17 @@
+(2c)
+
+Until about N=1000 the difference between the sums is extremely small, and after that increases 
+proportional to N^2. Around N = 1e6 it starts to level out, and there becomes a set difference 
+between the two, the cause of which is pretty unavoidable computationally.
+
+While the two are qualitatively the same for N < 1000, after that the downward sum will
+begin to be the only one that is accurate. In simplistic terms, if the difference between two 
+numbers being summed is too great, the sum will just be the larger number. When summing down, 
+you start with the small numbers, so the difference between the sum and the next number added will 
+stay pretty small. When you start with the large number, the difference will only grow with more 
+Ns as you started with the largest numbers and are attempting to add smaller and smaller numbers. 
+Eventually when the N gets to big, you'll get numbers less than machine precision, and they simply
+will not change, which is why the error stops growing in relation to N. Essentially, machine precision
+will evenually become like a hard limit, and both the sums will not change no matter how many more N 
+you do the function with.
+
