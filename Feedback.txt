@@ -1,0 +1,30 @@
+# HW grading scale: check(++) --> excellent (good code and analysis AND also completed bonus problem)  
+#                   check(+) --> excellent (good code and analysis)  
+#                   check    --> satisfactory (minor shortcomings in code and/or analysis)
+#                   check(-) --> significant problems w/code or analysis
+
+1) Problem 1 (area.cpp embellishments): 
+
+Your code looks great.  
+
+2)Problem 2 (sum up/down): 
+
+Your figure looks right and your analysis is spot on-- it's 
+just a bit more complicated version of the 1+eps+eps... vs eps + eps +...+1 
+problem we did in class. So the downward sum is more precise.  
+
+3) Problem 3 (bessel functions): 
+
+Again, your results and analysis look great. 
+
+(Sidenote: If interested, you can understand numerical value of the slope between x=1 and 10
+using the short-distance x << l expressions of the spherical bessel and neumann functions. See Ch. 4 
+notes. I wonder if one can play similar games for the VERY steep 
+region above x = 30 using the asymptotic x >> l expressions for jl(x) and nl(x).)
+
+4) Extra problem (roundoff distribution):
+Looks good to me!
+
+##### HW grade = check(++) 
+
+Great job. (And sorry for depriving you of your beloved matplotlib ;)). 
